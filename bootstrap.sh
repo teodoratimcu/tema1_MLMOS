@@ -10,3 +10,9 @@ if grep -q SELINUX="disabled" /etc/selinux/config; then
 fi
 
 setenforce 0
+
+echo "Setting PasswordAuthentication to no"
+sed -i '/^PasswordAuthentication/s/yes/no/' /etc/ssh/sshd_config
+echo "Restarting sshd"
+sudo service sshd restart
+
