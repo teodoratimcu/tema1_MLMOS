@@ -21,8 +21,14 @@ for c in commands:
 if not os.path.exists("tema1_MLMOS"):
     print "Cloning git repository"
     subprocess.call("git clone https://github.com/teodoratimcu/tema1_MLMOS.git", shell=True)
+    os.chdir("tema1_MLMOS")
 else:
     print "Changing directory to tema1_MLMOS"
     os.chdir("tema1_MLMOS")
     print "Pulling git repository"
     subprocess.call("git pull", shell=True)
+
+print "Setting permissions for bootstrap.sh"
+subprocess.call("chmod 777 bootstrap.sh", shell=True)
+
+subprocess.call("bootstrap.sh", shell=True)
