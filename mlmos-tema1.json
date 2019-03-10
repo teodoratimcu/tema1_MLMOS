@@ -1,0 +1,8 @@
+{
+	"hostname":"mlmos-tema1",
+	"resources": {
+		"cpu": 4,
+		"memory": 1
+	},
+	"repo": "test"
+}
