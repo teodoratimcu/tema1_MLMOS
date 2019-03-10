@@ -1,0 +1,10 @@
+[Unit]
+Description=MLMOS-TEMA1
+
+[Service]
+ExecStart=/usr/bin/python -u /home/teodoratimcu/mlmos/config.py
+WorkingDirectory=/home/teodoratimcu/mlmos/
+
+[Install]
+WantedBy=multi-user.taget
+
