@@ -31,4 +31,8 @@ else:
 print "Setting permissions for bootstrap.sh"
 subprocess.call("chmod 777 bootstrap.sh", shell=True)
 
-subprocess.call("bootstrap.sh", shell=True)
+print "Starting bootstrap.sh"
+
+bootstrap_log = open("/var/log/system-bootstrap.log", "w")
+
+subprocess.call("./bootstrap.sh", shell=True, stdout=bootstrap_log, stderr=bootstrap_log)

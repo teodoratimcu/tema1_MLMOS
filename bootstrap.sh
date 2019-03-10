@@ -1,2 +1,5 @@
 #/bin/bash
-echo "Suntem in scriptul bash de pe repo"
+echo "bootstrap.sh is running"
+
+echo "Updating system software"
+yum update
